@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br"  >
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Estudando HTML</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="container">
+      <div id="profile">
+        <a href="#" onclick="this(alert('Vc clicou na foto ou no nome'))">
+          <img src="./assets/assets/avatar-light.png" alt="Avatar" />
+          <p>@Leandro Braga</p>
+        </a>
+      </div>
+
+      <!-- * BOTÃO PARA MUDAR A COR DE E A IMAGEM DO SISTE -->
+      <div id="switch" onclick="toogleMode()">
+        <button>
+       
+        </button>
+        <span></span>
+
+      </div>
+
+      <div class="list">
+        <ul>
+          <li><a href="#">Escrendo o meu HTML</a></li>
+          <li><a href="#">Escrendo o meu HTML</a></li>
+          <li><a href="#">Escrendo o meu HTML</a></li>
+          <li>
+            <a href="https://google.com" target="_blank">Escrendo o meu HTML</a>
+          </li>
+        </ul>
+      </div>
+
+      <div id="social-links">
+        <a hr ef="">
+          <ion-icon name="logo-github"></ion-icon>
+        </a>
+
+        <a href="">
+          <ion-icon name="logo-instagram"></ion-icon>
+        </a>
+        <a href="">
+          <ion-icon name="logo-youtube"></ion-icon>
+        </a>
+        <a href="">
+          <ion-icon name="logo-linkedin"></ion-icon>
+        </a>
+      </div>
+
+      <footer>
+        Feito com amor pela <a href="">rocketseat </a> 
+      </footer>
+    </div>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+
+
+    <script src="script.js"></script>
+  </body>
+</html>

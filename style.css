@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* * ACESSANDO A RAYS PA PAGINA E CRIANDO UMA VARIAVEL COM O TEXTO PADRÃO */
+:root{
+  --text-color: white;
+  --bg-url: url(./assets/assets/bg-mobile.jpg);
+  --stroke-color: rgba(255, 255, 255, 0.5);
+  --surface-color:rgba(255,255,255, 0.05);
+  --surface-color-hover:rgba(0,0,0, 0.02);
+  --heghlight-color: rgba(255,255,255, 0.2);
+  --switght-bg-url: url(moon-starts.svg);
+}
+
+/* * Muda todas as cores do site para preto */
+.light{
+  --text-color:black;
+  --bg-url:  url(./assets/assets/bg-mobile-light.jpg);
+  --stroke-color:rgba(0,0,0, 0.5);
+  --surface-color:rgba(0,0,0, 0.05);
+  --heghlight-color: rgba(0,0,0, 0.1);
+  --switght-bg-url: url(sun.svg);
+
+ 
+}
+
+
+body {
+  background-image: var(--bg-url);
+  /* PARA A IMAGENS NÃO REPETIR */
+  background-repeat: no-repeat;
+  /* CENTRALIZA A IMAGEM NO TOP E NO CENTRO */
+  background-position: top center;
+  /* PARA QUE A IMAGEM OCULPE TODA A TELA */
+  background-size: cover;
+
+  /* AGRUPANDADO TUDO */
+  /* background-image: url(./assets/assets/bg-mobile.jpg) no-repeat top center/cover; */
+}
+
+body * {
+  font-family:  'Inter', sem serifa;
+  color: var(--text-color);
+}
+
+#container {
+  /* border: 1px solid red; */
+  /* height: 512px; */
+  width: 360px;
+  /* box-shadow: 10px 5px 5px 5px #eee; */
+
+  /* ALINHA A CAIXA AO MEIO */
+  margin: 30px auto 0px;
+  /*      top  let-rigth   button        */
+  /* margin-top: 56px;
+    border-radius: 3px; */
+
+    border-radius: 3px;
+
+    padding: 0 24px;
+    
+}
+
+/* * PROFILE */
+
+#profile {
+  /* border: 1px solid blue; */
+  text-align: center;
+  padding: 20px;
+  margin: 3px;
+}
+
+
+/* ESTILIZANDO A IMAGEM */
+#profile img {
+  width: 112px;
+  /* border: 1px solid orange; */
+}
+
+#profile p {
+  font-weight: 400;
+  line-height: 25px; /* 150% */
+  margin-top: 8px;
+  /* border: 1px solid green; */
+}
+
+#profile a {
+  text-decoration: none;
+}
+
+/* * switch  */
+#switch {
+  display: flex;
+ 
+  /* border: 1px solid red; */
+  position: relative;
+  margin: 4px auto;
+  width: 64px;
+ 
+}
+
+#switch button{
+  width: 32px;
+  height:32px;
+  border-radius: 50%; 
+  border: 0;
+  background: #fff  var(--switght-bg-url) no-repeat center;
+  
+  /* ? para sobrepor elementos um encima do outro */
+  position: absolute;
+  /* ? Mudar a camada que o botão esta */
+  z-index:1;
+
+  /** Alinha elemento com o transform usado para alinha elemento absolute  */
+  transform: translateY(-50%);
+  top:50%;
+
+ left:0;
+
+
+
+ 
+}
+
+.light #switch button{
+  right: 0;
+  /** Tonando o left inicial */
+  left: initial;
+}
+
+#switch span{
+  display: block;
+  width: 64px;
+  height: 24px;
+  background: var(--surface-color);
+  border: 1px solid var(--stroke-color);
+  backdrop-filter: blur(4px);
+  /* ? FUNCIONAR EM OUTOS NAVEGADORES */
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 9999px;
+  
+
+}
+
+/* LINKS */
+
+.list {
+  /* border: 1px solid orange; */
+  padding: 3px;
+}
+
+ul {
+
+  padding: 5px 0;
+
+  /* border: 1px solid rgb(209, 14, 248); */
+  /* TIRAR AS BOLINHAS DA LISTA */
+  list-style: none;
+
+  display: flex;
+
+  /* MECHER COM AS COLUNAS */
+  flex-direction: column;
+
+  /* Colocar espaco entre as linhas */
+  gap: 18px;
+}
+
+ul li a{
+  text-decoration: none;
+  /* border: 1px solid pink; */
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+  height: 52px;
+
+  background:var(--surface-color);
+  border:1px solid var(--stroke-color);
+  border-radius: 8px;
+
+/* Para embassar o elemento de forma suave */  
+backdrop-filter:blur(4px);
+
+/* Deixa a letra mais grossa */
+font-weight: 500;
+
+/* Torna a transação suave com o trasition */
+transition: background 0.5s;
+
+}
+
+/* pseudo-selector */
+ul li a:hover{
+  background:var(--surface-color-hover);
+  border:1.5px solid var(--text-color);
+  
+
+}
+
+#social-links{
+  /* border: 1px solid #e90e0e; */
+  margin-top: 3px;
+  padding: 3px 0px ;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  /* gap:32px; */
+  font-size: 24px;
+
+   
+}
+
+#social-links a{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 16px;
+
+  transition: background 0.2s;
+  border-radius: 50%;
+
+
+}
+
+#social-links a:hover{
+  background:var(--heghlight-color);
+  
+}
+
+/* ion-icon {
+  color: rgb(245, 18, 207);
+} */
+
+
+footer{
+  padding: 3px 0;
+  text-align: center;
+
+  font-size: 16px;
+}
