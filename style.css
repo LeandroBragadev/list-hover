@@ -49,9 +49,11 @@ body * {
 }
 
 #container {
-  /* border: 1px solid red; */
+  border: 1px solid red;
   /* height: 512px; */
-  width: 360px;
+  width: 100%;
+
+  max-width: 480px;
   /* box-shadow: 10px 5px 5px 5px #eee; */
 
   /* ALINHA A CAIXA AO MEIO */
