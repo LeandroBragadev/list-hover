@@ -39,6 +39,9 @@ body {
   /* PARA QUE A IMAGEM OCULPE TODA A TELA */
   background-size: cover;
 
+  /* * Preemcher toda a altura do viewport */
+  height: 100vh;
+
   /* AGRUPANDADO TUDO */
   /* background-image: url(./assets/assets/bg-mobile.jpg) no-repeat top center/cover; */
 }
@@ -247,3 +250,19 @@ footer{
 
   font-size: 16px;
 }
+
+@media(min-width: 700px){
+
+  :root{
+  
+   --bg-url: url(./assets/assets/bg-desktop.jpg);
+  
+  }
+  
+  .light{
+   --bg-url: url(./assets/assets/bg-desktop-light.jpg);
+  
+  
+  }
+  
+  }
