@@ -127,15 +127,20 @@ body * {
 
  left:0;
 
-
+ animation: slide-back 0.2s ;
 
  
 }
 
+/** Houver do Botão */
+#switch button:hover{
+  outline: 8px solid var(--heghlight-color);
+}
+
+
 .light #switch button{
-  right: 0;
-  /** Tonando o left inicial */
-  left: initial;
+ 
+  animation: slide-in 0.2s forwards;
 }
 
 #switch span{
@@ -150,6 +155,30 @@ body * {
   border-radius: 9999px;
   
 
+}
+
+
+/**   Animação do botão */
+@keyframes slide-in{
+  from{
+    left:0;
+  }
+
+  to{
+   left:50%;
+  }
+}
+
+/** Para volta o botão */
+@keyframes slide-back{
+  from {
+  left:50%;
+  
+  }
+  to{
+   left:0;
+  }
+  
 }
 
 /* LINKS */
